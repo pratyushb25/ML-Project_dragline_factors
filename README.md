@@ -93,4 +93,4 @@ Neeraj K. for providing data
 
 - Pratyush Bharadwaj - your.email@example.com
 - LinkedIn - www.linkedin.com/in/pratyush-bharadwaj25
-- Project Link: [https://github.com/your-username/dragline_factors](https://github.com/your-username/dragline_factors)
+- Project Link: [https://github.com/pratyushb25/dragline_factors](https://github.com/pratyushb25/dragline_factors)
