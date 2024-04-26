@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Dragline Performance Estimation Model
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This project is designed to create a machine learning model that aids in the estimation of operational parameters for draglines, some of the largest machines used in surface mining. The model aims to predict various pass factors and volumes based on operational data, significantly reducing the time required for planning and enhancing operational efficiency. This methodology has potential applications in related industries such as construction in the future.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+These instructions will guide you through setting up the project on your local machine for development and testing purposes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Python 3.8 or above
+- pip and virtualenv
+- TensorFlow 2.x
+- Jupyter Notebook or Google Colab for interactive development
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/dragline_factors.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd dragline_factors
+   ```
+3. Create and activate a virtual environment (optional but recommended):
+   ```
+   virtualenv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+4. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the model and view predictions:
+1. Open the Jupyter Notebook:
+   ```
+   jupyter notebook dragline_model.ipynb
+   ```
+2. Execute the notebook cells sequentially to train the model and view predictions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data Description
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The dataset used (`Dragline Factors V1.xlsx`) includes operational parameters and simulated pass factors for draglines. Inputs include Dragline type, method, and operational envelope, while outputs are the pass factors for multiple operational steps.
 
-### `npm run eject`
+### Columns
+- Input: Dragline, Method, Dip, Width, Coal Thickness, Pass Thicknesses
+- Output: Cast Factors, Dozer Push Factors, Dragline Factors, Total Prime Factors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Model Details
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The model is a deep neural network built using TensorFlow and Keras, structured as follows:
+- Multiple dense layers with ReLU activation
+- Dropout for regularisation
+- Mean squared error loss function
+- Adaptive learning rate scheduling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Results and Evaluation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The model's performance can be evaluated by running the test set through the provided notebook. A custom test set can be created by simply modifying the excel sheet (the code only picks up on specific columns). A detailed comparison of actual vs. predicted values and mean absolute errors are presented in tabular and graphical forms within the notebook.
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- TensorFlow - An end-to-end open-source platform for machine learning.
+- Pandas - Library for data manipulation and analysis.
+- NumPy - Fundamental package for scientific computing with Python.
+- Scikit-Learn - Tools for data mining and data analysis.
+- Matplotlib - Library for creating static, animated, and interactive visualisations in Python.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Any contributions as well as general feedback is greatly appreciated.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Pratyush Bharadwaj** - *Initial work* - [pratyushb25](https://github.com/pratyushb25)
 
-### Making a Progressive Web App
+## Acknowledgments
+Neeraj K. for providing data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact Information
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Pratyush Bharadwaj - your.email@example.com
+- LinkedIn - www.linkedin.com/in/pratyush-bharadwaj25
+- Project Link: [https://github.com/pratyushb25/dragline_factors](https://github.com/pratyushb25/dragline_factors)
