@@ -4,7 +4,7 @@
 
 This project is designed to create a machine learning model that aids in the estimation of operational parameters for draglines, some of the largest machines used in surface mining. The model aims to predict various pass factors and volumes based on operational data, significantly reducing the time required for planning and designing for a mine site. This methodology has potential applications in related industries such as construction in the future.
 
-Taking the project a step further, I creates a user interface using Flask and React to interact with the pre-trained model. This allows users to input data through a web form and receive predictions. Flask was chosen for its simplicity and flexibility, which made it fast and straightforward to set up a web server capable of serving the machine learning model's API. React's component-based architecture was used to build a responsive and interactive UI.
+Taking the project a step further, I created a user interface using Flask for the API and React for interactions. This lets a user interact with the pre-trained model. This allows users to input data through a web form and receive predictions. Flask was chosen for its simplicity and flexibility, which made it fast and straightforward to set up a web server capable of serving the machine learning model's API. React's component-based architecture was used to build a responsive and interactive UI.
 
 ## Getting Started
 
@@ -15,8 +15,8 @@ These instructions will guide you through setting up the project on your local m
 - Python 3.8 or above
 - pip and virtualenv
 - TensorFlow 2.x
-- Jupyter Notebook or Google Colab for interactive development
-
+- Jupyter Notebook or Google Colab for model and visualisations
+  
 ### Installation
 
 1. Clone the repository:
@@ -27,10 +27,11 @@ These instructions will guide you through setting up the project on your local m
    ```
    cd dragline_factors
    ```
-3. Create and activate a virtual environment (optional but recommended):
+3. Create and activate a virtual environment (I prefer this to isolate package installations):
    ```
    virtualenv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   # On Windows use `venv\Scripts\activate`
+   # on Max and Linux use `source venv/bin/activate`
    ```
 4. Install the required packages:
    ```
@@ -65,7 +66,7 @@ The dataset used (`Dragline Factors V1.xlsx`) includes operational parameters an
 ### Columns
 - Input: Dragline, Method, Dip, Width, Coal Thickness, Pass Thicknesses
 - Output: Cast Factors, Dozer Push Factors, Dragline Factors, Total Prime Factors
-It's recommended to keep the input and output columns in their original place since the model relies on Excel's column labels to manipulate the data. 
+It's recommended to keep the input and output columns in their original place because the model relies on Excel's column labels to interact with the data. 
 
 ## Model Details
 
