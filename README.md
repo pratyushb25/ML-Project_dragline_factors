@@ -6,6 +6,15 @@ This project is designed to create a machine learning model that aids in the est
 
 Taking the project a step further, I created a user interface using Flask for the API and React for interactions. This lets a user interact with the pre-trained model. This allows users to input data through a web form and receive predictions. I chose Flask for its simplicity and flexibility, which made it fast and straightforward to set up a web server capable of serving the machine learning model's API. React's component-based architecture was used to build a responsive and interactive UI.
 
+<div style="text-align: center;">
+    <img src="https://github.com/pratyushb25/dragline_factors/assets/114146978/e430ac01-b208-4801-95f4-f2bf1dda4869" width="400">
+</div>
+    
+<div style="text-align: center;">
+    <img src="https://github.com/pratyushb25/dragline_factors/assets/114146978/32af6262-c5f9-42ee-aae4-c35932c318f3" width="400">
+</div>  
+
+
 ## Getting Started
 
 These instructions will guide you through setting up the project on your local machine for development and testing purposes.
