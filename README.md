@@ -122,4 +122,3 @@ Neeraj K. for providing data
 
 - Email: 1125.pratyushb@gmail.com
 - LinkedIn: www.linkedin.com/in/pratyush-bharadwaj25
-- Project Link: [https://github.com/pratyushb25/dragline_factors](https://github.com/pratyushb25/dragline_factors)
