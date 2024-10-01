@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This project is designed to create a machine learning model that aids in the estimation of operational parameters for draglines, some of the largest machines used in surface mining. The model aims to predict various pass factors and volumes based on operational data, significantly reducing the time required for planning and designing for a mine site. This methodology has potential applications in related industries such as construction in the future. But it is important to note that these figures are rough estimates and can be used to support decisions, not make them. 
+I started this project to improve my understanding of analytics and programming concepts while tackling a real-world problem that's unique and typically stays under the radar. I've created a machine learning model that aims to predict pass factors and volumes based on operational data from draglines, some of the largest machines used in surface mining. This can significantly reduce the time required for planning and designing for a mine site. It can also be applied in related industries such as construction in the future.
 
-Taking the project a step further, I created a user interface using Flask for the API and React for interactions. This lets a user interact with the pre-trained model. This allows users to input data through a web form and receive predictions. I chose Flask for its simplicity and flexibility, which made it fast and straightforward to set up a web server capable of serving the machine learning model's API. React's component-based architecture was used to build a responsive and interactive UI.
+Taking the project a step further, I created a user interface using Flask for the API and React for interactions. This lets a user interact with the pre-trained model. Users can input data through a web form and receive predictions immediately. I chose Flask for its simplicity and flexibility, I set up a web server capable of serving the machine learning model's API. I used react to build the interactive UI (because I want it to look nice)
 
 <div style="text-align: center;">
     <img src="https://github.com/pratyushb25/dragline_factors/assets/114146978/e430ac01-b208-4801-95f4-f2bf1dda4869" width="400">
@@ -17,7 +17,7 @@ Taking the project a step further, I created a user interface using Flask for th
 
 ## Getting Started
 
-These instructions will guide you through setting up the project on your local machine for development and testing purposes.
+Instructions to guide you through setting up the project on your local machine for development and testing purposes
 
 ### Prerequisites
 
@@ -70,13 +70,13 @@ To interact with the model via the user interface:
 
 ## Data Description
 
-The dataset used (`Dragline Factors V1.xlsx`) includes operational parameters and simulated pass factors for draglines. Inputs include Dragline type, method, and operational envelope, while outputs are the pass factors for multiple operational steps. The data is contextual for mining and machinery fields, but general concept calculating outputs from inputs still remains. 
+The dataset used (`Dragline Factors V1.xlsx`) includes operational parameters and simulated pass factors for draglines. Inputs include Dragline type, method, and operational envelope, while outputs are the pass factors for multiple operational steps. The data is contextual for mining and machinery fields, but general concept of predicting outputs from historic data still remains. 
 
 ### Columns
 - Input: Dragline, Method, Dip, Width, Coal Thickness, Pass Thicknesses
 - Output: Cast Factors, Dozer Push Factors, Dragline Factors, Total Prime Factors
 It's recommended to keep the input and output columns in their original place because the model relies on Excel's column labels to interact with the data.
-- The grey columns were not incorporated within the model. 
+- The grey columns were not incorporated within the model, frankly I don't know enough about mining machinery to understand what they mean
 
 ## Model Details
 
@@ -86,19 +86,21 @@ The model is a deep neural network built using TensorFlow and Keras, structured 
 - Mean squared error loss function
 - Adaptive learning rate scheduling
 
+The model can be improved to keep predictions within set thresholds.
+
 ## Results and Evaluation
 
-The model's performance can be evaluated by running the test set through the provided notebook. You can create a custom test set by simply modifying the excel sheet (keep in mind the model only picks up on specific columns). A detailed comparison of actual vs. predicted values and mean absolute errors are presented in tabular and graphical forms within the notebook.
+I evaluated the model's performance by running the test set through the model. You can create a custom test set by simply modifying the excel sheet (keep in mind the model only picks up on specific columns). I present a comparison of actual vs. predicted values and mean absolute errors in graphs and tables within the notebook.
 
 ## Built With
 
-- TensorFlow - An end-to-end open-source platform for machine learning.
-- Pandas - Library for data manipulation and analysis.
-- NumPy - Fundamental package for scientific computing with Python.
-- Scikit-Learn - Tools for data mining and data analysis.
-- Matplotlib - Library for creating static, animated, and interactive visualisations in Python.
-- Flask - A lightweight WSGI web application framework.
-- React - A JavaScript library for building user interfaces.
+- TensorFlow - my choice of libary to create deep learning models (because it's open source and the first one I learnt)
+- Pandas - for data manipulation
+- NumPy - data manipulation and fitting
+- Scikit-Learn - for data preprocessing and model evaluation
+- Matplotlib - creating visualisations
+- Flask - for creating a lightweight api to serve the trained model
+- React - framework for making things look nice
 
 ## Contributing
 
@@ -113,10 +115,6 @@ Any contributions as well as general feedback is greatly appreciated.
 ## Author
 
 **Pratyush Bharadwaj** - [pratyushb25](https://github.com/pratyushb25)
-
-## Acknowledgments
-
-Neeraj K. for providing data
 
 ## Contact Information
 
